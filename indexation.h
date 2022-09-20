@@ -1,7 +1,8 @@
 #ifndef ATELIER_INDEXATION_FUNCTIONS_H
 #define ATELIER_INDEXATION_FUNCTIONS_H
 
-#include "nrc/def.h"
+#include "def.h"
+#include <stdio.h>
 
 /*
  * PrintMask allows you to print the selected mask in the console.
@@ -33,5 +34,23 @@ void sauvegardeTableHistogramme(double *histogramme, FILE *f,char * nom,int *ind
 double euclidienneDistance(double* hist1,double* hist2);
 extern const int horizontal_gradient [3][3] ;
 extern const int vertical_gradient[3][3];
+
+const int impulse_response[3][3] = {
+        {1,1,1},
+        {1,1,1},
+        {1,1,1}
+    };
+
+    const int horizontal_gradient[3][3] = {
+            {-1,0,1},
+            {-2,0,2},
+            {-1,0,1}
+    };
+
+    const int vertical_gradient[3][3] = {
+            {-1,-2,-1},
+            {0,0,0},
+            {1,2,1}
+    };
 //void b_distToCSV(char *directory);
 #endif //ATELIER_INDEXATION_FUNCTIONS_H

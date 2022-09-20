@@ -4,9 +4,9 @@
 #include <dirent.h>
 #include<string.h>
 #include "indexation.h"
-#include "nrc/def.h"
-#include ".\nrc\nrio.h"
-#include ".\nrc\nralloc.h"
+#include "def.h"
+#include "nrio.h"
+#include "nralloc.h"
 
 /**
  *
